@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hazard Train</title>
+    <link rel="stylesheet" href="hazardtrain.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/Kato%20In%20Borderline%20Logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/Kato%20In%20Borderline%20Logo.png">
+</head>
+<body>
+<header>
+    Hazard <span>Train</span>
+</header>
+<div id="introScreen">
+    <div class="introCards">
+        <div class="introCard">
+            <h2>[DIFFICULTY]</h2>
+            <p><img src="images/Air-logic6.png" alt="airlogic"> AIR OF LOGIC : 6</p>
+        </div>
+        <div class="introCard">
+            <h2>[INSTRUCTIONS]</h2>
+            <p>Carts 1–10 to 11–21 each hide 5 poison traps. You start with 5 canisters At Cart 11 (Checkpoint), you gain 3 more.<br>
+                You may scan 2 carts ahead, but it costs HP.</p>
+        </div>
+        <div class="introCard">
+            <h2>[CLEAR CONDITION]</h2>
+            <p>Reach the Finish Cart safely.</p>
+        </div>
+    </div>
+    <button id="startBtnIntro">Start Game</button>
+</div>
+<div id="game" style="display:none;">
+
+    <div id="status"></div>
+    <!-- Train -->
+    <div id="trainWrapper">
+        <div id="train"></div>
+    </div>
+
+    <!-- HUD -->
+    <div id="hud">
+        <div id="leftHud">
+            <div class="hudSection">
+                <div class="hudTitle">Canisters</div>
+                <div id="maskIcons"></div>
+            </div>
+            <div class="hudSection">
+                <div class="hudTitle">HP</div>
+                <div id="hp"></div>
+            </div>
+            <div class="hudSection">
+                <div class="hudTitle">Timer</div>
+                <div id="timerDisplay">15s</div>
+            </div>
+        </div>
+
+        <div id="rightHud">
+            <button id="scanBtn">Scan Ahead</button>
+            <button id="useMask">Use Canister</button>
+            <button id="skip">Take Risk</button>
+        </div>
+    </div>
+
+    <div id="overlay">
+        <div id="overlayMsg"></div>
+        <button id="overlayBtn">Play Again</button>
+    </div>
+</div>
+<script src="hazardtrain.js"></script>
+</body>
+</html>
