@@ -1,0 +1,14 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #111;
+    height: 100vh;
+    margin: 0;
+}
+#game {
+    display: grid;
+    grid-template-columns: repeat(25, 24px);
+    grid-template-rows: repeat(25, 24px);
+    gap: 1px;
+}
