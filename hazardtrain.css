@@ -121,6 +121,7 @@ transition: opacity 0.45s ease, transform 0.45s ease;
     border-radius: 10px;
     border: 1px solid #444;
     box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+    margin-top: 50px;
     text-align: center;
     font-size: 13px;
     line-height: 1.3;
@@ -154,7 +155,6 @@ transition: opacity 0.45s ease, transform 0.45s ease;
     box-sizing: border-box;
 }
 
-
 #trainWrapper {
 background: #1a1a1a;
 border-top: 6px solid #444;
@@ -164,7 +164,7 @@ padding: 12px;
 border-radius: 12px;
 box-shadow: 0 5px 20px rgba(0,0,0,0.6);
 width: calc(100% - 40px);
-overflow: hidden; / no scroll */
+overflow: hidden;
 }
 
 #train {
@@ -419,7 +419,6 @@ footer {
     cursor: not-allowed;
 }
 
-/* Overlay improvement */
 #overlay {
     position: fixed;
     top: 0;
@@ -557,4 +556,68 @@ footer {
 #status.show {
     opacity: 1;
     transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    header {
+        font-size: 22px;
+        padding: 12px;
+        letter-spacing: 1px;
+    }
+
+    .introCards {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 10px;
+    }
+
+    .introCard {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    #trainWrapper {
+        padding: 8px;
+        width: calc(100% - 20px);
+    }
+
+    .cart {
+        min-width: 28px;
+        height: 48px;
+        font-size: 9px;
+    }
+
+    #hud {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    #rightHud button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    #status {
+        font-size: 20px;
+        padding: 6px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        font-size: 18px;
+    }
+
+    .introCard img {
+        width: 80px;
+    }
+
+    #statusBar {
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    #timerDisplay {
+        font-size: 18px;
+    }
 }
